@@ -1,0 +1,66 @@
+.item {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #fff;
+    transition: background .2s ease;
+
+    &__logo {
+        width: 22px;
+        height: 22px;
+        margin-right: 20px;
+    }
+
+    &__title {
+        color: #000;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    &:hover {
+        background-color: #f1f0f0;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 800px) {
+    .item {
+
+        &__logo {
+            width: 18px;
+            height: 18px;
+        }
+
+        &__title {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .item {
+
+        &__logo {
+            width: 18px;
+            height: 18px;
+        }
+
+        &__title {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .item {
+        justify-content: center;
+        // &__logo {
+        //     width: 18px;
+        //     height: 18px;
+        // }
+
+        &__title {
+            display: none;
+        }
+    }
+}

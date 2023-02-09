@@ -1,0 +1,79 @@
+.overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(224, 224, 224, 0.544);
+    filter: blur(15px);
+}
+
+.auth {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 18px;
+            height: 18px;
+            transition: all .3s ease;
+            &:hover {
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__email, &__pass {
+        width: 500px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        outline: none;
+    }
+
+    &__btn {
+        padding: 10px 20px;
+        border: 0;
+        outline: 0;
+        background-color: rgb(52, 179, 88);
+        transition: all .2s ease;
+        font-size: 18px;
+        &:hover {
+            background-color: rgb(64, 173, 115);
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .auth {
+        &__email, &__pass {
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .auth {
+        &__email, &__pass {
+            width: 250px;
+        }
+    }
+}
