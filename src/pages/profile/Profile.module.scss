@@ -1,0 +1,20 @@
+.profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+.title {
+   margin-bottom: 20px;
+}
+
+.name {
+    font-weight: 300;
+}

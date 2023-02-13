@@ -2,8 +2,12 @@ import React, { FC } from 'react'
 import styles from './Header.module.scss'
 import { Search } from '../search/Search'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../../providers/useAuth'
+import { IsAuth } from '../IsAuth/IsAuth'
 
 export const Header: FC = () => {
+  const { user } = useAuth()
+
   return (
     <div className={styles.header}>
       <Link to="/">
@@ -13,9 +17,7 @@ export const Header: FC = () => {
       </Link>
       <Search />
 
-      <Link to="auth">
-        <h3 className={styles.auth}>huy</h3>
-      </Link>
+      {user ? <IsAuth /> : <h3 className={styles.auth}>😏</h3>}
     </div>
   )
 }
